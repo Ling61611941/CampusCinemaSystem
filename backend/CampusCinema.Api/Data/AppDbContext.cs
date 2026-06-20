@@ -10,6 +10,7 @@ public class AppDbContext : DbContext
     }
 
     public DbSet<Movie> Movies => Set<Movie>();
+    public DbSet<Hall> Halls => Set<Hall>();
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -43,6 +44,27 @@ public class AppDbContext : DbContext
                 ReleaseDate = new DateTime(2023, 1, 22),
                 Score = 7.0m,
                 Status = "正在热映"
+            }
+        );
+
+        modelBuilder.Entity<Hall>().HasData(
+            new Hall
+            {
+                Id = 1,
+                Name = "校园一号厅",
+                RowCount = 5,
+                ColumnCount = 8,
+                Type = "普通厅",
+                Status = "启用"
+            },
+            new Hall
+            {
+                Id = 2,
+                Name = "校园报告厅",
+                RowCount = 8,
+                ColumnCount = 12,
+                Type = "报告厅",
+                Status = "启用"
             }
         );
     }
