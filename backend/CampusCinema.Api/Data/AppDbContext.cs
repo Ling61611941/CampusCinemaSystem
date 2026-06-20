@@ -11,7 +11,7 @@ public class AppDbContext : DbContext
 
     public DbSet<Movie> Movies => Set<Movie>();
     public DbSet<Hall> Halls => Set<Hall>();
-
+public DbSet<Schedule> Schedules => Set<Schedule>();
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         base.OnModelCreating(modelBuilder);
