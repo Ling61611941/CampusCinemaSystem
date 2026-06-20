@@ -8,6 +8,10 @@ export function getSchedule(id) {
   return request.get(`/Schedules/${id}`)
 }
 
+export function getSchedulesByMovie(movieId) {
+  return request.get(`/Schedules/movie/${movieId}`)
+}
+
 export function createSchedule(data) {
   return request.post('/Schedules', data)
 }
