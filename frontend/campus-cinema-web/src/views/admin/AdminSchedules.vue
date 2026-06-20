@@ -3,10 +3,11 @@
     <div class="top">
       <h2>后台排片管理</h2>
       <div>
-        <el-button type="primary" @click="openAddDialog">新增排片</el-button>
-        <el-button @click="$router.push('/admin/movies')">电影管理</el-button>
-        <el-button @click="$router.push('/admin/halls')">影厅管理</el-button>
-        <el-button @click="$router.push('/')">返回前台</el-button>
+      <el-button type="primary" @click="openAddDialog">新增排片</el-button>
+<el-button @click="$router.push('/admin/movies')">电影管理</el-button>
+<el-button @click="$router.push('/admin/halls')">影厅管理</el-button>
+<el-button @click="$router.push('/admin/orders')">订单管理</el-button>
+<el-button @click="$router.push('/')">返回前台</el-button>
       </div>
     </div>
 
