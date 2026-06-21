@@ -40,16 +40,16 @@
         <el-table-column prop="status" label="状态" width="100" />
 
         <el-table-column label="操作" width="140">
-          <template #default>
-            <el-button
-  type="primary"
-  size="small"
-  @click="$router.push(`/booking/${scope.row.id}`)"
->
-  选座购票
-</el-button>
-          </template>
-        </el-table-column>
+  <template #default="scope">
+    <el-button
+      type="primary"
+      size="small"
+      @click="$router.push(`/booking/${scope.row.id}`)"
+    >
+      选座购票
+    </el-button>
+  </template>
+</el-table-column>
       </el-table>
     </el-card>
   </div>
